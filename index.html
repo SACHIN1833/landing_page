@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jng" href="images/icon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">Chess master</div>
+        <nav class="links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Features">Features</a></li>
+                <li><a href="#content">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+    <div id="Home">
+        <button class="start">Get Started</button>
+    </div>
+    <hr>
+    <div id="about">
+        <div class="bg-text">
+            <h1 class="head">About</h1>
+            <h2 class="heading">CHESS MASTER</h2>
+            <p id="p1">
+              ChessMaster is dedicated to providing the best online chess exprience. Whether you are a beginner or a grandmaster. We have something for you
+            </p>
+            <div class="Users">
+                <h2 class="heading">What Our Users Say</h2>
+                    <blockquote>
+                        <p id="p1">"ChessMaster has completely changed the way I play chess. The online play is fantastic!"</p>
+                            <cite>- Jane Doe</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p id="p1">"The tutorials are so helpful, I went from beginner to intermediate in no time."</p>
+                            <cite>- John Smith</cite>
+                    </blockquote>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="Features">
+        <div class="text">
+        <h2 class="head">Features</h2>
+        <h3 class="heading">Online Play </h3>
+        <p id="p1">Challenge players from around the world</p>
+        <h3 class="heading">Tutorial</h3>
+        <p id="p1">Learn the game from the group up</p>
+        <h3 class="heading">Tournaments</h3>
+        <p id="p1">Complete in regular tournaments and win prizes</p>
+        </div>
+    </div>
+</main>
+    <footer>
+        <div id="content">
+       
+        <div class="social-media">
+            <p>Contact me on social media:</p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2024 ChessMaster. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.links a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const tid = this.getAttribute('href').substring(1);
+            const telement = document.getElementById(tid);
+            
+            window.scrollTo({
+                top: telement.offsetTop - 90, 
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>
